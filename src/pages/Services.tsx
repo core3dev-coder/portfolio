@@ -7,25 +7,25 @@ import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const highlights = [
-  "Dedicated strategy, design, and engineering leads",
-  "CMS setup with flexible blocks and documentation",
-  "Performance, accessibility, and SEO baked into every sprint",
-  "Launch support with monitoring and experimentation ideas",
+  "Dedicated web design, development, and strategy leads",
+  "Custom CMS development with flexible content blocks and documentation",
+  "Website performance optimization and accessibility built into every sprint",
+  "Post-launch website maintenance with monitoring and conversion optimization",
 ];
 
 const ServicesPage = () => {
   return (
-    <main className="pt-28 md:pt-36 lg:pt-40 space-y-0">
-      <section className="py-20 md:py-28">
+    <main className="space-y-0">
+      <section className="pt-16 md:pt-20 pb-20 md:pb-28">
         <div className="container px-6 grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <p className="eyebrow">Core3 services</p>
+            <p className="eyebrow">Professional web design & development services</p>
             <h1 className="section-heading">
-              Websites, products, and digital campaigns crafted with premium polish and measurable ROI.
+              Custom websites, web applications, and digital marketing campaigns crafted with premium design and measurable ROI.
             </h1>
             <p className="section-subheading">
-              We combine design systems, thoughtful UX, and robust engineering to help brands launch confidently without
-              managing multiple vendors.
+              We combine modern design systems, thoughtful user experience design, and robust web development to help brands launch 
+              high-performance websites confidently without managing multiple vendors.
             </p>
             <div className="grid gap-4">
               {highlights.map((item) => (
@@ -50,14 +50,14 @@ const ServicesPage = () => {
           <div className="rounded-[32px] border border-border/70 bg-white/90 p-8 shadow-[0_30px_80px_rgba(15,23,42,0.1)]">
             <div className="space-y-6">
               <div>
-                <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground">Engagements</p>
-                <h2 className="text-2xl font-semibold mt-3">Launch sprints, full rebuilds, or partner retainers.</h2>
+                <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground">Web development packages</p>
+                <h2 className="text-2xl font-semibold mt-3">Website launch sprints, full website rebuilds, or ongoing web development retainers.</h2>
               </div>
               <ul className="space-y-3 text-muted-foreground">
-                <li>• Product & marketing website creation</li>
-                <li>• Experience refresh without changing your backend</li>
-                <li>• Multi-site systems and localization</li>
-                <li>• Ongoing CRO, feature work, and site care</li>
+                <li>• Custom website design & development for products & marketing</li>
+                <li>• Website redesign services without changing your backend</li>
+                <li>• Multi-site web development and localization services</li>
+                <li>• Ongoing conversion optimization, feature development, and website maintenance</li>
               </ul>
             </div>
           </div>

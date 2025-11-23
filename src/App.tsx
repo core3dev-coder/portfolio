@@ -12,6 +12,7 @@ import ContactPage from "./pages/Contact";
 import GlobalBackground from "./components/GlobalBackground";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import CustomCursor from "./components/CustomCursor";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <BrowserRouter>
+        <CustomCursor />
         <GlobalBackground />
         <div className="relative min-h-screen flex flex-col">
           <Header />

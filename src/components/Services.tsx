@@ -3,22 +3,22 @@ import { LayoutTemplate, ShieldCheck, Sparkles, Wrench } from "lucide-react";
 
 const services = [
   {
-    title: "Brand-ready experiences",
-    description: "High-converting digital experiences shaped by Core3's design team.",
+    title: "Custom website design services",
+    description: "High-converting website design and user experience design services shaped by Core3's expert design team.",
     icon: Sparkles,
-    highlights: ["Premium UI systems", "Editorial-grade storytelling", "Mobile-first micro-interactions"],
+    highlights: ["Premium UI/UX design systems", "Editorial-grade content strategy", "Mobile-responsive web design"],
   },
   {
-    title: "Full-stack engineering",
-    description: "Robust builds that balance performance, accessibility, and scale.",
+    title: "Full-stack web development",
+    description: "Robust custom website development that balances performance, accessibility, and scalability.",
     icon: Wrench,
-    highlights: ["Next.js / React expertise", "API + integration support", "Infrastructure & DevOps guidance"],
+    highlights: ["Next.js & React web development", "API integration & backend development", "Cloud infrastructure & DevOps"],
   },
   {
-    title: "Optimization & care",
-    description: "Audits, improvements, and proactive support for existing products.",
+    title: "Website optimization services",
+    description: "Website performance optimization and proactive maintenance for existing web properties.",
     icon: ShieldCheck,
-    highlights: ["Performance & SEO audits", "Accessibility remediation", "Continuous CRO experiments"],
+    highlights: ["Website speed optimization", "Accessibility compliance", "Conversion rate optimization"],
   },
 ];
 
@@ -27,13 +27,13 @@ const Services = () => {
     <section id="services" className="py-28 md:py-32 relative">
       <div className="container px-6 space-y-16">
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <p className="eyebrow">What Core3 delivers</p>
+          <p className="eyebrow">Professional web development services</p>
           <h2 className="section-heading">
-            Strategy, design, and engineering built to move faster than traditional agencies.
+            Custom website design and development services built to move faster than traditional web agencies.
           </h2>
           <p className="section-subheading">
-            Every engagement is senior-led. Expect polished deliverables, thoughtful collaboration, and measurable
-            outcomes.
+            Every web development project is senior-led. Expect polished deliverables, thoughtful collaboration, and measurable
+            results that drive business growth.
           </p>
         </div>
 
@@ -71,14 +71,14 @@ const Services = () => {
               <div className="w-14 h-14 rounded-2xl bg-muted flex items-center justify-center">
                 <LayoutTemplate className="w-6 h-6 text-muted-foreground" />
               </div>
-              <CardTitle className="text-2xl">Flexible playbooks</CardTitle>
+              <CardTitle className="text-2xl">Flexible web development packages</CardTitle>
               <CardDescription className="text-base">
-                We adapt to your roadmap—whether we lead product strategy or embed into your internal team.
+                We adapt our web design and development services to your roadmap—whether we lead product strategy or embed into your internal team.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4 text-sm text-muted-foreground">
-              <p>Choose from quarterly retainers, project-based builds, or launch sprints without ever seeing a price table.</p>
-              <p>Every engagement starts with a Core3 discovery and a roadmap you can share with leadership.</p>
+              <p>Choose from quarterly retainers, project-based website builds, or launch sprints without ever seeing a price table.</p>
+              <p>Every web development engagement starts with a Core3 discovery session and a strategic roadmap you can share with leadership.</p>
             </CardContent>
           </Card>
         </div>

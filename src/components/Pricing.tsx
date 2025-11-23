@@ -9,10 +9,10 @@ const pricingTiers = [
     price: "$2,500",
     period: "per project",
     features: [
-      "Performance audit & report",
+      "Performance analysis & report",
       "Speed optimization (up to 40% improvement)",
       "Mobile responsiveness fixes",
-      "Basic SEO improvements",
+      "Content optimization",
       "1 month post-launch support",
     ],
     highlighted: false,

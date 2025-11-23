@@ -15,28 +15,28 @@ const values = [
 
 const AboutPage = () => {
   return (
-    <main className="pt-28 md:pt-36 lg:pt-40 space-y-0">
-      <section className="py-20 md:py-28">
+    <main className="space-y-0">
+      <section className="pt-16 md:pt-20 pb-20 md:pb-28">
         <div className="container px-6 grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <p className="eyebrow">About Core3</p>
-            <h1 className="section-heading">We are a full-stack digital agency focused on trust, modern design, and smart development.</h1>
+            <p className="eyebrow">About Core3 web design agency</p>
+            <h1 className="section-heading">We are a full-stack web development agency focused on trust, modern website design, and smart custom development.</h1>
             <p className="section-subheading">
-              Founded by senior designers and engineers, Core3 was built to help ambitious teams launch premium websites
-              without the chaos of managing multiple vendors. We operate like an embedded unit—strategic, proactive, and
-              easy to collaborate with.
+              Founded by senior web designers and software engineers, Core3 was built to help ambitious teams launch premium, 
+              high-performance websites without the chaos of managing multiple vendors. We operate like an embedded web development 
+              unit—strategic, proactive, and easy to collaborate with.
             </p>
           </div>
           <div className="rounded-[32px] border border-border/60 bg-white/90 p-8 shadow-[0_30px_80px_rgba(15,23,42,0.1)] space-y-6">
-            <h2 className="text-2xl font-semibold">Mission</h2>
+            <h2 className="text-2xl font-semibold">Our mission</h2>
             <p className="text-muted-foreground">
-              To build trustworthy digital experiences that feel personal and perform flawlessly. We believe premium
-              design and engineering should be accessible to teams of every size.
+              To build trustworthy, high-performance websites and digital experiences that feel personal and perform flawlessly. 
+              We believe premium website design and custom web development should be accessible to teams of every size.
             </p>
-            <h2 className="text-2xl font-semibold pt-4">Story</h2>
+            <h2 className="text-2xl font-semibold pt-4">Our story</h2>
             <p className="text-muted-foreground">
-              Core3 emerged from shipping dozens of enterprise sites where polish was often sacrificed for speed. We
-              designed a better model—small senior teams, thoughtful process, honest collaboration.
+              Core3 emerged from shipping dozens of enterprise websites where design quality was often sacrificed for speed. 
+              We designed a better web development model—small senior teams, thoughtful process, honest collaboration.
             </p>
           </div>
         </div>

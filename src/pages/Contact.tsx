@@ -5,15 +5,15 @@ import { Mail, MessageCircle, Phone } from "lucide-react";
 
 const ContactPage = () => {
   return (
-    <main className="pt-28 md:pt-36 lg:pt-40 space-y-0">
-      <section className="py-20 md:py-28">
+    <main className="space-y-0">
+      <section className="pt-16 md:pt-20 pb-20 md:pb-28">
         <div className="container px-6 grid lg:grid-cols-2 gap-14">
           <div className="space-y-6">
-            <p className="eyebrow">Contact Core3</p>
-            <h1 className="section-heading">Tell us about your roadmap. We'll reply with a tailored plan.</h1>
+            <p className="eyebrow">Contact Core3 web design agency</p>
+            <h1 className="section-heading">Tell us about your website project roadmap. We'll reply with a tailored web development plan.</h1>
             <p className="section-subheading">
-              Share as much context as you can—timeline, goals, existing platforms. We typically respond within one
-              business day.
+              Share as much context as you can—timeline, goals, existing platforms. Our web development team typically responds 
+              within one business day with a customized proposal for your website design and development needs.
             </p>
             <div className="space-y-4">
               <a href="mailto:core3dev@gmail.com" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition">

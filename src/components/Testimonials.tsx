@@ -23,13 +23,6 @@ const testimonials = [
       "The new site feels editorial and premium, but it's also fast and easy to edit. Every detail was intentional—from typography to CMS workflows.",
     rating: 5,
   },
-  {
-    name: "David Thompson",
-    role: "VP of Operations, Brightline Logistics",
-    content:
-      "Core3 rebuilt our platform with performance budgets and QA baked in. Support after launch has been proactive, not reactive.",
-    rating: 5,
-  },
 ];
 
 const Testimonials = () => {

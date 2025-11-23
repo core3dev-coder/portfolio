@@ -3,7 +3,7 @@ const strengths = [
     title: "Transparent partnership",
     description: "Weekly loom updates, live dashboards, and access to the exact team building your product.",
     stat: "72h",
-    statLabel: "Audit turnaround",
+    statLabel: "Response time",
   },
   {
     title: "Global-level polish",
@@ -13,7 +13,7 @@ const strengths = [
   },
   {
     title: "Performance obsessed",
-    description: "Core Web Vitals, accessibility, and SEO scores monitored before and after launch.",
+    description: "Core Web Vitals and accessibility monitored before and after launch.",
     stat: "90+",
     statLabel: "Lighthouse avg.",
   },
@@ -24,13 +24,13 @@ const WhyChoose = () => {
     <section className="py-28 md:py-32 relative bg-secondary/30">
       <div className="container px-6 grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
         <div className="space-y-6">
-          <p className="eyebrow">Why teams choose Core3</p>
+          <p className="eyebrow">Why teams choose Core3 web design agency</p>
           <h2 className="section-heading">
-            We treat every website like a flagship product—because that's how your customers experience it.
+            We treat every custom website like a flagship product—because that's how your customers experience your brand online.
           </h2>
           <p className="section-subheading">
-            Expect opinionated creative direction, controlled engineering, and post-launch support that actually
-            sticks around.
+            Expect opinionated creative web design direction, controlled web development engineering, and post-launch website 
+            maintenance support that actually sticks around.
           </p>
           <div className="rounded-3xl border border-border/60 bg-white/90 p-8 shadow-[0_30px_80px_rgba(15,23,42,0.08)]">
             <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground/80">Core values</p>

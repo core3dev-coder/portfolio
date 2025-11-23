@@ -3,31 +3,31 @@ import { CheckCircle2 } from "lucide-react";
 const processSteps = [
   {
     number: "01",
-    title: "Insight & alignment",
+    title: "Website strategy & alignment",
     description:
-      "A 360º audit uncovers friction, missed storylines, and technical weak spots. We align with your leadership on priorities.",
-    deliverable: "CX audit + roadmap",
+      "We analyze your current website and user experience to uncover friction, missed opportunities, and technical improvements. We align with your leadership on web development priorities.",
+    deliverable: "Website discovery + development roadmap",
   },
   {
     number: "02",
-    title: "Design direction",
+    title: "Website design direction",
     description:
-      "Core3’s creative team defines the visual system, narrative, and component library before a single line of code is shipped.",
-    deliverable: "Interactive artboards & prototypes",
+      "Core3's creative web design team defines the visual design system, content narrative, and UI component library before a single line of code is shipped.",
+    deliverable: "Interactive website mockups & prototypes",
   },
   {
     number: "03",
-    title: "Build & refine",
+    title: "Website development & refinement",
     description:
-      "Engineers, QA, and PMs ship in weekly sprints. Expect playbacks, accessible builds, and performance budgets baked in.",
-    deliverable: "Staging site + sprint recaps",
+      "Our web developers, QA engineers, and project managers ship in weekly sprints. Expect playbacks, accessible website builds, and performance optimization budgets baked in.",
+    deliverable: "Staging website + development sprint recaps",
   },
   {
     number: "04",
-    title: "Launch & care",
+    title: "Website launch & maintenance",
     description:
-      "We orchestrate launch, monitor vitals, and stay on as your proactive partner for experiments, CRO, and new initiatives.",
-    deliverable: "Post-launch optimization plan",
+      "We orchestrate website launch, monitor performance metrics, and stay on as your proactive web development partner for experiments, conversion optimization, and new features.",
+    deliverable: "Post-launch website optimization plan",
   },
 ];
 
@@ -36,9 +36,9 @@ const Process = () => {
     <section className="py-28 md:py-32 relative bg-secondary/60">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 space-y-4">
-          <p className="eyebrow">Workflow</p>
-          <h2 className="section-heading">A calm, controlled process that keeps launches on schedule.</h2>
-          <p className="section-subheading">No chaos. No mystery. Just clarity from audit to post-launch care.</p>
+          <p className="eyebrow">Web development workflow</p>
+          <h2 className="section-heading">A calm, controlled website development process that keeps launches on schedule.</h2>
+          <p className="section-subheading">No chaos. No mystery. Just clarity from website discovery to post-launch website maintenance.</p>
         </div>
 
         <div className="max-w-5xl mx-auto space-y-8">
