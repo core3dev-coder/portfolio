@@ -1,0 +1,21 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pill-nav-gradient" x1="8" y1="56" x2="56" y2="8" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0EA5E9" />
+      <stop offset="0.5" stop-color="#6366F1" />
+      <stop offset="1" stop-color="#A855F7" />
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="18" fill="url(#pill-nav-gradient)" />
+  <path
+    d="M37.5 18C28.94 18 22 24.94 22 33.5C22 42.06 28.94 49 37.5 49C42.17 49 46.33 47.05 49.24 43.93L45.42 40.14C43.58 42.28 40.73 43.58 37.5 43.58C32.07 43.58 27.58 39.09 27.58 33.66C27.58 28.23 32.07 23.74 37.5 23.74C40.73 23.74 43.58 25.04 45.42 27.18L49.24 23.39C46.33 20.27 42.17 18.32 37.5 18.32V18Z"
+    fill="white"
+    opacity="0.95"
+  />
+  <path
+    d="M18.5 24.5C18.5 20.91 21.41 18 25 18H32.5L30.42 22.92H25.92C24.58 22.92 23.5 24 23.5 25.34V41.66C23.5 43 24.58 44.08 25.92 44.08H30.42L32.5 49H25C21.41 49 18.5 46.09 18.5 42.5V24.5Z"
+    fill="white"
+  />
+</svg>
+
+
