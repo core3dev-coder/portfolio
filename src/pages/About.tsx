@@ -13,9 +13,16 @@ const values = [
   },
 ];
 
+import SEO from "@/components/SEO";
+
 const AboutPage = () => {
   return (
     <main className="space-y-0">
+      <SEO
+        title="About Us - Our Mission & Team | Core3"
+        description="We partner with businesses to optimize performance and build scalable digital infrastructure. Founded by senior web designers and software engineers."
+        canonical="/about"
+      />
       <section className="pt-16 md:pt-20 pb-20 md:pb-28">
         <div className="container px-6 grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">

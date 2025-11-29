@@ -3,9 +3,16 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MessageCircle, Phone } from "lucide-react";
 
+import SEO from "@/components/SEO";
+
 const ContactPage = () => {
   return (
     <main className="space-y-0">
+      <SEO
+        title="Contact Us - Start Your Project | Core3"
+        description="Ready to elevate your digital presence? Book a discovery call with our team today. We typically respond within one business day."
+        canonical="/contact"
+      />
       <section className="pt-16 md:pt-20 pb-20 md:pb-28">
         <div className="container px-6 grid lg:grid-cols-2 gap-14">
           <div className="space-y-6">

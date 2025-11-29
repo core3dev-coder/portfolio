@@ -3,9 +3,10 @@ import { gsap } from "gsap";
 
 interface IntroAnimationProps {
   onComplete: () => void;
+  onTransitionStart?: () => void;
 }
 
-const IntroAnimation = ({ onComplete }: IntroAnimationProps) => {
+const IntroAnimation = ({ onComplete, onTransitionStart }: IntroAnimationProps) => {
   const [isVisible, setIsVisible] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
   const brandRef = useRef<HTMLDivElement>(null);
@@ -15,6 +16,9 @@ const IntroAnimation = ({ onComplete }: IntroAnimationProps) => {
     if (!containerRef.current || !brandRef.current || !taglineRef.current) return;
 
     const tl = gsap.timeline({
+      onStart: () => {
+        if (onTransitionStart) onTransitionStart();
+      },
       onComplete: () => {
         setTimeout(() => {
           setIsVisible(false);

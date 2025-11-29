@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import SEO from "@/components/SEO";
+
 const highlights = [
   "Dedicated web design, development, and strategy leads",
   "Custom CMS development with flexible content blocks and documentation",
@@ -16,6 +18,11 @@ const highlights = [
 const ServicesPage = () => {
   return (
     <main className="space-y-0">
+      <SEO
+        title="Web Design & Development Services | Core3"
+        description="Custom websites, web applications, and digital marketing campaigns crafted with premium design and measurable ROI."
+        canonical="/services"
+      />
       <section className="pt-16 md:pt-20 pb-20 md:pb-28">
         <div className="container px-6 grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
@@ -24,7 +31,7 @@ const ServicesPage = () => {
               Custom websites, web applications, and digital marketing campaigns crafted with premium design and measurable ROI.
             </h1>
             <p className="section-subheading">
-              We combine modern design systems, thoughtful user experience design, and robust web development to help brands launch 
+              We combine modern design systems, thoughtful user experience design, and robust web development to help brands launch
               high-performance websites confidently without managing multiple vendors.
             </p>
             <div className="grid gap-4">
