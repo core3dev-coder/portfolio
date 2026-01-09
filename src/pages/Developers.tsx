@@ -11,7 +11,7 @@ const developers = [
         bio: "Passionate about building scalable web applications and exploring new technologies.",
         portfolio: "https://kaustubh7-portfolio.netlify.app",
         initials: "K",
-        github: "",
+        github: "https://github.com/kaustubhhhh7",
     },
     {
         name: "Victorraj",
