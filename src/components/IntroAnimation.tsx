@@ -16,14 +16,9 @@ const IntroAnimation = ({ onComplete, onTransitionStart }: IntroAnimationProps) 
     if (!containerRef.current || !brandRef.current || !taglineRef.current) return;
 
     const tl = gsap.timeline({
-      onStart: () => {
-        if (onTransitionStart) onTransitionStart();
-      },
       onComplete: () => {
-        setTimeout(() => {
-          setIsVisible(false);
-          onComplete();
-        }, 300);
+        setIsVisible(false);
+        onComplete();
       },
     });
 
@@ -44,7 +39,7 @@ const IntroAnimation = ({ onComplete, onTransitionStart }: IntroAnimationProps) 
       opacity: 1,
       scale: 1,
       letterSpacing: "0.2em",
-      duration: 1.2,
+      duration: 0.6,
       ease: "power3.out",
     })
       // Animate tagline
@@ -53,25 +48,38 @@ const IntroAnimation = ({ onComplete, onTransitionStart }: IntroAnimationProps) 
         {
           opacity: 1,
           y: 0,
-          duration: 0.8,
+          duration: 0.4,
           ease: "power2.out",
         },
-        "-=0.4"
+        "-=0.3"
       )
       // Hold
-      .to({}, { duration: 1.5 })
-      // Fade out
+      .to({}, { duration: 0.4 })
+      // Trigger Hero transition before fading out
+      .call(() => {
+        if (onTransitionStart) onTransitionStart();
+      })
+      // Fade out content
       .to(
         [brandRef.current, taglineRef.current],
         {
           opacity: 0,
           scale: 0.95,
-          duration: 0.8,
+          duration: 0.4,
           ease: "power2.in",
-        },
-        "-=0.2"
-      );
-  }, [onComplete]);
+        }
+      )
+      // Fade out container
+      .to(containerRef.current, {
+        opacity: 0,
+        duration: 0.4,
+        ease: "power1.inOut",
+      }, "-=0.2");
+
+    return () => {
+      tl.kill();
+    };
+  }, [onComplete, onTransitionStart]);
 
   if (!isVisible) return null;
 

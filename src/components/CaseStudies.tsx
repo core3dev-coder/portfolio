@@ -27,6 +27,46 @@ const caseStudies = [
     image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=800&h=600&fit=crop",
     live: "https://kavacchh.netlify.app/",
   },
+  {
+    client: "Advocate Law",
+    industry: "Legal Services",
+    summary: "Professional digital presence for legal counsel, focusing on trust, clarity, and client accessibility.",
+    metrics: ["+35% inquiries", "Semantic HTML", "Fast Response"],
+    image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=800&h=600&fit=crop",
+    live: "https://lawfirm-advocate.netlify.app/",
+  },
+  {
+    client: "ScrollScape",
+    industry: "Creative Portfolio",
+    summary: "Immersive scrolling experience showcasing creative work with dynamic animations and smooth transitions.",
+    metrics: ["High engagement", "GSAP Animations", "Unique UI"],
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=600&fit=crop",
+    live: "https://scrollscape-frontend.netlify.app/",
+  },
+  {
+    client: "Core3 Real Estate",
+    industry: "Real Estate",
+    summary: "Premium property listing platform with advanced search capabilities and high-quality visual presentation.",
+    metrics: ["+40% leads", "Virtual Tours", "Interactive Map"],
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
+    live: "https://real-estate-core3.netlify.app/",
+  },
+  {
+    client: "ResuCraft",
+    industry: "Career & Productivity",
+    summary: "Intuitive resume building tool helping professionals craft ATS-friendly resumes with ease and precision.",
+    metrics: ["User-friendly", "Real-time preview", "PDF Export"],
+    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop",
+    live: "https://resucraft-resu-builder.netlify.app/",
+  },
+  {
+    client: "Polite Project",
+    industry: "Web Application",
+    summary: "A modern, responsive web application demonstrating clean architecture and efficient state management.",
+    metrics: ["Responsive Design", "Fast Loading", "Modern Stack"],
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop",
+    live: "https://polite-blini-ac02ab.netlify.app/",
+  },
 ];
 
 const CaseStudies = () => {
