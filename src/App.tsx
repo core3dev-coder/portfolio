@@ -27,6 +27,17 @@ const App = () => {
   });
   const [introTransitioning, setIntroTransitioning] = useState(false);
 
+  const handleIntroComplete = useCallback(() => {
+    setIntroComplete(true);
+    sessionStorage.setItem("hasSeenIntro", "true");
+  }, []);
+
+  const handleTransitionStart = useCallback(() => {
+    setIntroTransitioning(true);
+    // Reset transition state after animation completes
+    setTimeout(() => setIntroTransitioning(false), 1500);
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <HelmetProvider>
@@ -34,15 +45,8 @@ const App = () => {
           <BrowserRouter>
             {!introComplete && (
               <IntroAnimation
-                onComplete={useCallback(() => {
-                  setIntroComplete(true);
-                  sessionStorage.setItem("hasSeenIntro", "true");
-                }, [])}
-                onTransitionStart={useCallback(() => {
-                  setIntroTransitioning(true);
-                  // Reset transition state after animation completes
-                  setTimeout(() => setIntroTransitioning(false), 1500);
-                }, [])}
+                onComplete={handleIntroComplete}
+                onTransitionStart={handleTransitionStart}
               />
             )}
             <GlobalBackground />

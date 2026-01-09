@@ -65,34 +65,6 @@ const Hero = ({ introTransitioning = false }: HeroProps) => {
     parallaxRefs.current = parallaxRefs.current.slice(0, slides.length);
   }, []);
 
-  // Animate first slide when intro transitions
-  useEffect(() => {
-    if (introTransitioning && firstSlideTextRef.current && currentSlide === 0) {
-      // Make first slide visible
-      const firstSlide = slideRefs.current[0];
-      if (firstSlide) {
-        gsap.set(firstSlide, { opacity: 1 });
-      }
-
-      // Animate text from intro position (already in position from intro animation)
-      gsap.fromTo(
-        firstSlideTextRef.current,
-        {
-          opacity: 0,
-          scale: 0.4,
-          y: -window.innerHeight * 0.35,
-        },
-        {
-          opacity: 1,
-          scale: 1,
-          y: 0,
-          duration: 1.2,
-          ease: "power2.out",
-        }
-      );
-    }
-  }, [introTransitioning, currentSlide]);
-
   // Parallax effect on mouse movement
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -127,15 +99,11 @@ const Hero = ({ introTransitioning = false }: HeroProps) => {
       const textEl = textRefs.current[index];
 
       if (slideEl && textEl) {
-        if (index === currentSlide) {
-          // Animate in
-          gsap.to(slideEl, {
-            opacity: 1,
-            scale: 1,
-            duration: 1.2,
-            ease: "power2.out",
-          });
-          if (index !== 0 || !introTransitioning) {
+        if (slideEl && textEl) {
+          if (index === currentSlide) {
+            // Reset scale for incoming slide (optional, or let CSS handle it if you added transition-transform)
+            gsap.set(slideEl, { scale: 1 }); // Ensure initialized state
+
             gsap.fromTo(
               textEl,
               {
@@ -152,26 +120,20 @@ const Hero = ({ introTransitioning = false }: HeroProps) => {
                 ease: "power3.out",
               }
             );
+          } else {
+            // Reset for other slides if needed
+            gsap.to(textEl, {
+              opacity: 0,
+              y: -20,
+              scale: 0.98,
+              duration: 0.6,
+              ease: "power2.in",
+            });
           }
-        } else {
-          // Animate out
-          gsap.to(slideEl, {
-            opacity: 0,
-            scale: 1.05,
-            duration: 0.8,
-            ease: "power2.in",
-          });
-          gsap.to(textEl, {
-            opacity: 0,
-            y: -20,
-            scale: 0.98,
-            duration: 0.6,
-            ease: "power2.in",
-          });
         }
       }
     });
-  }, [currentSlide, introTransitioning]);
+  }, [currentSlide]);
 
   // Autoplay functionality
   useEffect(() => {

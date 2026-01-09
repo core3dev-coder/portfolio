@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo-mark.svg";
 import { cn } from "@/lib/utils";
 
 const navItems = [
@@ -69,14 +68,6 @@ const Header = () => {
               className="flex items-center gap-2 transition-all duration-300 hover:scale-105 group"
               aria-label="Home"
             >
-              <div className="relative">
-                <img
-                  src={logo}
-                  alt="Core3 Digital"
-                  className="h-8 w-8 opacity-90 group-hover:opacity-100 transition-opacity"
-                />
-                <div className="absolute inset-0 bg-primary/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
-              </div>
               <span className="text-sm font-semibold tracking-[0.2em] uppercase text-white/90 group-hover:text-white transition-colors">
                 Core3
               </span>
@@ -143,7 +134,6 @@ const Header = () => {
               className="flex items-center gap-2 transition-all duration-300 hover:opacity-80"
               aria-label="Home"
             >
-              <img src={logo} alt="Core3 Digital" className="h-8 w-8 opacity-90" />
               <span className="text-sm font-semibold tracking-[0.2em] uppercase text-white/90">
                 Core3
               </span>
