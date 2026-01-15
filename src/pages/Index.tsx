@@ -7,19 +7,15 @@ import CaseStudies from "@/components/CaseStudies";
 import FAQ from "@/components/FAQ";
 import SEO from "@/components/SEO";
 
-interface IndexProps {
-  introTransitioning?: boolean;
-}
-
-const Index = ({ introTransitioning = false }: IndexProps) => {
+const Index = () => {
   return (
     <main className="relative min-h-screen space-y-0">
       <SEO
-        title="Digital Agency - Strategic Web Optimization & Development"
-        description="Full-service digital agency specializing in web creation, project optimization, and scalable digital infrastructure."
+        title="Core3 Software - Enterprise Web Applications & Legacy Modernization"
+        description="Specialized software development firm delivering high-performance web applications, system audits, and legacy infrastructure modernization."
         canonical="/"
       />
-      <Hero introTransitioning={introTransitioning} />
+      <Hero />
       <Services />
       <WhyChoose />
       <Process />

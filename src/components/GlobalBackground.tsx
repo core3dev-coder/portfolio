@@ -1,51 +1,46 @@
-import ParticleField from "./ParticleField";
-
-const noiseTexture =
-  "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJibGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjY1IiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIGZpbHRlcj0idXJsKCNuKSIgb3BhY2l0eT0iMC4xMiIvPjwvc3ZnPg==";
-
 const GlobalBackground = () => {
   return (
-    <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-background">
-      {/* Dark Tech Grid Background */}
+    <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-[#050508]">
+      {/* Tech Grid Pattern */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(45, 91, 255, 0.05) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(45, 91, 255, 0.05) 1px, transparent 1px)
+            linear-gradient(rgba(99, 102, 241, 0.5) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(99, 102, 241, 0.5) 1px, transparent 1px)
           `,
-          backgroundSize: '50px 50px',
+          backgroundSize: '60px 60px',
         }}
       />
 
-      {/* Animated gradient base - Engineering Blue/Deep */}
+      {/* Gradient Orbs */}
       <div
-        className="absolute inset-0 bg-gradient-animated opacity-20"
+        className="absolute top-0 left-1/4 w-[600px] h-[600px] opacity-20"
         style={{
-          background:
-            "radial-gradient(circle at 20% 20%, rgba(45,91,255,0.15), transparent 45%), radial-gradient(circle at 80% 0%, rgba(0,200,255,0.1), transparent 40%), radial-gradient(circle at 50% 80%, rgba(90,45,255,0.15), transparent 45%)",
+          background: 'radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, transparent 60%)',
+        }}
+      />
+      <div
+        className="absolute bottom-0 right-1/4 w-[500px] h-[500px] opacity-15"
+        style={{
+          background: 'radial-gradient(circle, rgba(168, 85, 247, 0.3) 0%, transparent 60%)',
         }}
       />
 
-      {/* Animated gradient overlay with shifting colors */}
+      {/* Noise Texture */}
       <div
-        className="absolute inset-0 mix-blend-screen blur-3xl opacity-20 animate-pulse-glow"
+        className="absolute inset-0 opacity-[0.015]"
         style={{
-          backgroundImage:
-            "radial-gradient(circle at 10% 10%, rgba(45,91,255,0.2), transparent 55%), radial-gradient(circle at 90% 20%, rgba(0,255,255,0.1), transparent 50%), radial-gradient(circle at 80% 90%, rgba(45,91,255,0.15), transparent 55%)",
-        }}
-      />
-
-      {/* Floating particles - primary color handled by component */}
-      <ParticleField count={30} />
-
-      {/* Noise texture */}
-      <div
-        className="absolute inset-0 opacity-10"
-        style={{
-          backgroundImage: `url(${noiseTexture})`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
           backgroundRepeat: "repeat",
-          mixBlendMode: "overlay",
+        }}
+      />
+
+      {/* Scanline Effect (subtle) */}
+      <div
+        className="absolute inset-0 opacity-[0.02]"
+        style={{
+          backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.03) 2px, rgba(255,255,255,0.03) 4px)',
         }}
       />
     </div>

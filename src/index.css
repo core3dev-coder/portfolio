@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -10,84 +10,94 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Engineering-First Theme: Standard Dark Mode */
-    --background: 0 0% 2%; /* #050505 */
-    --foreground: 0 0% 98%;
+    /* Modern Software Company Theme: "Neo-Syndicate" */
 
-    /* Dark cards */
-    --card: 240 9% 6%; /* #0F0F12 */
-    --card-foreground: 0 0% 95%;
+    /* Deep Void Background #02040a */
+    --background: 224 71% 4%;
+    --foreground: 210 40% 98%;
 
-    --popover: 240 9% 6%;
-    --popover-foreground: 0 0% 95%;
+    /* Glassy/Translucent Cards */
+    --card: 224 71% 4%;
+    --card-foreground: 210 40% 98%;
 
-    /* Electric Cobalt Primary (#2D5BFF) */
-    --primary: 222 100% 59%;
-    --primary-foreground: 0 0% 100%;
+    --popover: 224 71% 4%;
+    --popover-foreground: 210 40% 98%;
 
-    /* Dark surface for secondary */
-    --secondary: 240 7% 11%;
-    --secondary-foreground: 0 0% 90%;
+    /* Vibrant Electric Violet to Blue */
+    --primary: 263 90% 51%;
+    /* Violet-600 */
+    --primary-foreground: 210 40% 98%;
 
-    /* Muted elements */
-    --muted: 240 5% 20%;
-    --muted-foreground: 240 5% 65%;
+    --secondary: 217 19% 27%;
+    --secondary-foreground: 210 40% 98%;
 
-    /* Electric Cobalt Accent */
-    --accent: 222 100% 59%;
-    --accent-foreground: 0 0% 100%;
+    --muted: 217 19% 27%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 263 90% 51%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 210 40% 98%;
 
-    /* Borders - #1A1A1E -> 240 7% 11% */
-    --border: 240 7% 11%;
-    --input: 240 7% 11%;
-    --ring: 222 100% 59%;
+    /* Borders - Subtle gradient feel via opacity */
+    --border: 217 19% 27%;
+    --input: 217 19% 27%;
+    --ring: 263 90% 51%;
 
     --radius: 0.75rem;
 
-    /* Custom tokens - Engineering/Tech Feel */
-    --gradient-primary: linear-gradient(135deg, hsl(222 100% 59%) 0%, hsl(190 90% 50%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(222 100% 59%) 0%, hsl(260 90% 60%) 100%);
-    --gradient-mesh: radial-gradient(at 0% 0%, hsl(222 100% 59% / 0.08) 0px, transparent 50%),
-      radial-gradient(at 100% 100%, hsl(0 0% 0% / 0.06) 0px, transparent 50%);
-    
-    --shadow-glow: 0 0 60px hsl(222 100% 59% / 0.25);
-    /* Subtle Inner Glow as requested */
-    --shadow-inner-glow: inset 0 0 20px hsl(222 100% 59% / 0.1);
-    
-    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.3), inset 0 0 0 1px hsl(240 7% 15%);
-    --shadow-luxury: 0 20px 60px rgba(0, 0, 0, 0.5);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Custom tokens - Modern Tech */
+    /* Primary Gradient: Violet to Blue */
+    --gradient-primary: linear-gradient(135deg, hsl(263 90% 51%) 0%, hsl(217 91% 60%) 100%);
 
-    --sidebar-background: 240 9% 6%;
-    --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 222 100% 59%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 7% 11%;
-    --sidebar-accent-foreground: 0 0% 90%;
-    --sidebar-border: 240 7% 11%;
-    --sidebar-ring: 222 100% 59%;
+    /* Mesh Gradient Background */
+    --gradient-mesh:
+      radial-gradient(at 0% 0%, hsl(263 90% 51% / 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsl(217 91% 60% / 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsl(263 90% 51% / 0.05) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsl(217 91% 60% / 0.05) 0px, transparent 50%);
+
+    --shadow-glow: 0 0 80px hsl(263 90% 51% / 0.15);
+    --shadow-inner-glow: inset 0 0 20px hsl(263 90% 51% / 0.05);
+
+    --shadow-card:
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+
+    --transition-smooth: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+    --sidebar-background: 224 71% 4%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 263 90% 51%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 217 19% 27%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 19% 27%;
+    --sidebar-ring: 263 90% 51%;
   }
 
   .dark {
-    /* Ensure dark mode matches root */
-    --background: 0 0% 2%;
-    --foreground: 0 0% 98%;
-    --card: 240 9% 6%;
-    --card-foreground: 0 0% 98%;
-    --primary: 222 100% 59%;
-    --primary-foreground: 0 0% 100%;
-    --border: 240 7% 11%;
-    --sidebar-background: 240 9% 6%;
-    --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 222 100% 59%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 7% 11%;
-    --sidebar-accent-foreground: 0 0% 90%;
-    --sidebar-border: 240 7% 11%;
-    --sidebar-ring: 222 100% 59%;
+    --background: 224 71% 4%;
+    --foreground: 210 40% 98%;
+    --card: 224 71% 4%;
+    --card-foreground: 210 40% 98%;
+    --popover: 224 71% 4%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 263 90% 51%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217 19% 27%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 19% 27%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 263 90% 51%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 19% 27%;
+    --input: 217 19% 27%;
+    --ring: 263 90% 51%;
   }
 }
 
@@ -132,16 +142,16 @@ All colors MUST be HSL.
 
 @layer components {
   .eyebrow {
-    @apply uppercase tracking-[0.3em] text-xs font-medium text-muted-foreground/80;
+    @apply uppercase tracking-[0.3em] text-[10px] font-medium text-muted-foreground/80;
     letter-spacing: 0.3em;
   }
 
   .section-heading {
-    @apply text-4xl md:text-5xl font-semibold leading-tight;
+    @apply text-3xl md:text-4xl font-semibold leading-tight;
   }
 
   .section-subheading {
-    @apply text-lg md:text-xl text-muted-foreground leading-relaxed;
+    @apply text-base md:text-lg text-muted-foreground leading-relaxed;
   }
 }
 

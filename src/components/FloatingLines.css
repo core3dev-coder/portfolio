@@ -1,0 +1,27 @@
+.floating-lines-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* Ensure it sits behind content. 
+     The USER can override mix-blend-mode via prop, or we can handle it in JS. 
+     If mix-blend-mode is passed as a prop, it applies to the div.
+  */
+    overflow: hidden;
+    user-select: none;
+    pointer-events: none;
+    /* Let clicks pass through if non-interactive, but JS handles listener on renderer */
+}
+
+/* If interactive, we might want pointer-events auto on the canvas, 
+   but the renderer attaches listeners to the container/canvas?
+   The code does: renderer.domElement.addEventListener('pointermove'...)
+   So the canvas needs pointer-events.
+*/
+.floating-lines-container canvas {
+    display: block;
+    pointer-events: auto;
+    /* Required for interaction */
+}

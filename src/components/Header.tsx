@@ -23,11 +23,10 @@ const Header = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      // Show/hide navbar based on scroll direction
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsVisible(false); // Scrolling down
+        setIsVisible(false);
       } else {
-        setIsVisible(true); // Scrolling up
+        setIsVisible(true);
       }
 
       setScrolled(currentScrollY > 50);
@@ -35,13 +34,13 @@ const Header = () => {
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); // Check initial state
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
   return (
     <>
-      {/* Floating Pill Navbar - Desktop */}
+      {/* Desktop Header */}
       <header
         className={cn(
           "fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-out hidden lg:block",
@@ -51,30 +50,29 @@ const Header = () => {
       >
         <nav
           className={cn(
-            "relative px-8 py-4 rounded-full",
-            "backdrop-blur-2xl bg-white/10 border border-white/20",
-            "shadow-[0_8px_32px_rgba(0,0,0,0.12)]",
-            "transition-all duration-500 ease-out",
-            scrolled && "bg-white/5 border-white/10"
+            "relative px-2 py-2 rounded-2xl",
+            "backdrop-blur-xl bg-[#0c0c14]/80 border border-white/10",
+            "shadow-[0_8px_32px_rgba(0,0,0,0.3)]",
+            "transition-all duration-500 ease-out"
           )}
-          style={{
-            backdropFilter: "blur(20px) saturate(180%)",
-          }}
         >
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-1">
             {/* Logo */}
             <Link
               to="/"
-              className="flex items-center gap-2 transition-all duration-300 hover:scale-105 group"
+              className="flex items-center gap-3 px-4 py-2 rounded-xl hover:bg-white/5 transition-all duration-300 group"
               aria-label="Home"
             >
-              <span className="text-sm font-semibold tracking-[0.2em] uppercase text-white/90 group-hover:text-white transition-colors">
-                Core3
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center">
+                <span className="text-white font-bold text-xs">C3</span>
+              </div>
+              <span className="text-sm font-medium text-white/90 group-hover:text-white transition-colors font-mono">
+                core3.dev
               </span>
             </Link>
 
             {/* Divider */}
-            <div className="h-6 w-px bg-white/20" />
+            <div className="h-8 w-px bg-white/10 mx-2" />
 
             {/* Navigation Links */}
             <div className="flex items-center gap-1">
@@ -85,29 +83,34 @@ const Header = () => {
                     key={item.href}
                     to={item.href}
                     onClick={() => {
-                      // Scroll to top smoothly when clicking nav link
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}
                     className={cn(
-                      "relative px-4 py-2 text-[11px] font-medium tracking-[0.2em] uppercase transition-all duration-300 rounded-full",
-                      "text-white/70 hover:text-white",
-                      isActive && "text-white"
+                      "relative px-4 py-2 text-xs font-medium tracking-[0.1em] uppercase transition-all duration-300 rounded-lg font-mono",
+                      "text-white/50 hover:text-white hover:bg-white/5",
+                      isActive && "text-white bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30"
                     )}
                   >
-                    {/* Active background */}
-                    {isActive && (
-                      <span className="absolute inset-0 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30 animate-pulse-glow" />
-                    )}
-
-                    {/* Hover background */}
-                    <span className="absolute inset-0 bg-white/5 rounded-full opacity-0 hover:opacity-100 transition-opacity duration-300" />
-
-                    {/* Text */}
-                    <span className="relative z-10">{item.label}</span>
+                    {item.label}
                   </Link>
                 );
               })}
             </div>
+
+            {/* Divider */}
+            <div className="h-8 w-px bg-white/10 mx-2" />
+
+            {/* CTA Button */}
+            <Link
+              to="/contact"
+              className="px-5 py-2.5 text-xs font-medium tracking-[0.1em] uppercase bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-lg transition-all duration-300 font-mono flex items-center gap-2"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              </span>
+              Hire Us
+            </Link>
           </div>
         </nav>
       </header>
@@ -123,19 +126,22 @@ const Header = () => {
           className={cn(
             "relative px-6 py-4 backdrop-blur-xl transition-all duration-500",
             scrolled
-              ? "bg-black/60 border-b border-white/10 shadow-lg"
-              : "bg-black/40 border-b border-white/5"
+              ? "bg-[#0c0c14]/90 border-b border-white/10"
+              : "bg-[#0c0c14]/70 border-b border-white/5"
           )}
         >
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link
               to="/"
-              className="flex items-center gap-2 transition-all duration-300 hover:opacity-80"
+              className="flex items-center gap-3 transition-all duration-300"
               aria-label="Home"
             >
-              <span className="text-sm font-semibold tracking-[0.2em] uppercase text-white/90">
-                Core3
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center">
+                <span className="text-white font-bold text-xs">C3</span>
+              </div>
+              <span className="text-sm font-medium text-white/90 font-mono">
+                core3.dev
               </span>
             </Link>
 
@@ -164,21 +170,32 @@ const Header = () => {
                       key={item.href}
                       to={item.href}
                       onClick={() => {
-                        // Close mobile menu
                         setMobileMenuOpen(false);
-                        // Scroll to top smoothly
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                       }}
                       className={cn(
-                        "block px-6 py-4 text-sm font-medium tracking-[0.15em] uppercase transition-all duration-300 rounded-lg",
-                        "text-white/70 hover:text-white hover:bg-white/5",
-                        isActive && "text-white bg-primary/20"
+                        "block px-4 py-3 text-sm font-medium tracking-[0.1em] uppercase transition-all duration-300 rounded-lg font-mono",
+                        "text-white/60 hover:text-white hover:bg-white/5",
+                        isActive && "text-white bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30"
                       )}
                     >
                       {item.label}
                     </Link>
                   );
                 })}
+
+                {/* Mobile CTA */}
+                <Link
+                  to="/contact"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="mt-4 px-4 py-3 text-sm font-medium tracking-[0.1em] uppercase bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg transition-all duration-300 font-mono text-center flex items-center justify-center gap-2"
+                >
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                  </span>
+                  Hire Us
+                </Link>
               </nav>
             </div>
           )}
